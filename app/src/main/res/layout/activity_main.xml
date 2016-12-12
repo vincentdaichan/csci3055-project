@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -10,28 +10,39 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.avincent.todolistapp.MainActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <EditText
-            android:id="@+id/textField"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="Enter new item"
+
+
+    <EditText
+        android:id="@+id/textField"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter new item"
+        android:textSize="20sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/addButton"
+        android:layout_toStartOf="@+id/addButton"
             />
-        <Button
-            android:id="@+id/addButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Add"
-            android:layout_toRightOf="@+id/textField"
-            />
-    </RelativeLayout>
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        />
+
 
     <ListView
         android:id="@+id/listView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
-    </ListView>
-</LinearLayout>
+        android:layout_below="@+id/addButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+         />
+
+
+</RelativeLayout>
